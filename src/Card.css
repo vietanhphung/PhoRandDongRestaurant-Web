@@ -1,0 +1,167 @@
+
+
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+
+
+#menuPage{
+    padding-top: 150px;
+    padding-left: 8vw;
+    padding-right: 8vw;
+    text-align: center;
+    display: grid;
+    grid-template-rows: auto auto auto;
+    grid-template-columns: auto;
+    background-color: rgb(27, 38, 30);
+    color: aliceblue;
+    padding-bottom: 200px ;
+
+    
+}
+
+#menuPage h1{
+    font-size: clamp(50px, 5vw, 100px);
+    font-family: "dancingScript";
+    animation: slideDownFadeIn 2000ms ease;
+
+
+}
+
+#instruct{
+    font-family: "arimaLight";
+    font-style: italic;
+    font-size: clamp(20px, 2.5vw, 30px);
+    animation: slideDownFadeIn 3000ms ease;
+
+
+}
+
+#cardContainer{
+    padding-top: 100px;
+    display: grid ;
+    grid-auto-rows: 250px;
+    grid-template-columns: repeat(auto-fit, minmax(max(300px, 90%/3), 1fr) );
+    gap: 30px;
+    animation: slideUpFadeIn 2000ms ease;
+
+}
+
+
+
+
+.menuCard{
+
+    color:white;
+    text-decoration: none;
+
+}
+
+.cardImg{
+    width: 100%;
+    height: 60%;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 20px;
+    
+    
+}
+
+.cardName{
+    font-size: clamp(20px,25px, 30px);
+    padding:10px;
+    font-family: "arimaRegular";
+}
+
+.cardDescription{
+    font-size: clamp(15px,17px,20px);
+    transform: translateY(-10px);
+    font-family: "arimaLight";
+}
+
+.menuText h3{
+    font-size: 40px;
+    font-style: italic;
+    
+}
+
+.menuText h4{
+    font-size: clamp(18px, 3vw ,25px);
+    transform: translateY(-10px);
+    font-family: "arimaRegular";
+
+}
+.menuText p{
+    font-size: clamp(15px,2vw,20px);
+    font-style: oblique;
+    transform: translateY(-25px);
+    font-family: "marimaLight";
+    margin-top: -15px;
+
+}
+
+
+.menuSection{
+    text-align:start;
+    height: fit-content;
+    scroll-margin-top:100px;
+    padding-left: 15%;
+    padding-right: 10%;
+    padding-top: 1px;
+}
+
+
+.menuText{
+    max-width: 100%;
+    display:block;
+    background-color: rgb(240, 227, 213);
+    margin-top: 100px;
+    border-radius: 20px;
+    color: black;
+}
+
+@keyframes slideDownFadeIn{
+    from {transform: translateY(-30px);
+    opacity: 0;}
+    to{transform: translateY(0);
+    opacity: 1;}
+}
+
+@keyframes slideUpFadeIn{
+    from {transform: translateY(100px);
+    opacity: 0;}
+    to{transform: translateY(0);
+    opacity: 1;}
+}
+
+
+
+
+#toTopButton{
+    width: 100px;
+    height: 50px;
+    position:sticky;
+    position:-webkit-sticky;
+    top: 0;
+    background-color: rgb(169, 205, 238);
+    text-decoration: none;
+    font-family: "arimaRegular";
+    border-radius: 10px;
+    left:100%;
+    padding-top:15px;
+    font-size: 20px;
+    transition: all 1200ms ease;
+}
+
+.toTopButton-visible{
+    opacity: 1;
+    visibility: visible;
+}
+.toTopButton-hidden{
+    opacity: 0;
+    filter: blur(.5);
+    transform: translateX(100%);
+    visibility: hidden;
+}

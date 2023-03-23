@@ -1,0 +1,50 @@
+
+
+body{
+  display: block;
+  background-color: rgb(0, 15, 38);
+
+}
+
+
+
+
+@font-face {
+  font-family: "Stylish-Regular";
+  src: url("./fonts/Stylish-Regular.ttf");
+}
+
+
+@font-face {
+  font-family: "pinyonScript";
+  src: url("./fonts/PinyonScript-Regular.ttf");
+}
+
+
+
+@font-face {
+  font-family: "dancingScript";
+  src: url("./fonts/DancingScript-VariableFont_wght.ttf");
+}
+
+
+@font-face {
+  font-family: "arimaExtraLight";
+  src: url("./fonts/ArimaMadurai-ExtraLight.ttf");
+}
+
+@font-face {
+  font-family: "arimaLight";
+  src: url("./fonts/ArimaMadurai-Light.ttf");
+}
+
+
+@font-face {
+  font-family: "arimaRegular";
+  src: url("./fonts/ArimaMadurai-Regular.ttf");
+}
+
+@font-face {
+  font-family: "faustina";
+  src: url("./fonts/Faustina-VariableFont_wght.ttf");
+}

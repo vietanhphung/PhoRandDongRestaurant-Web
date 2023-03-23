@@ -1,0 +1,129 @@
+.main2{
+    background-image: linear-gradient( rgb(26, 29, 45),#2D1D7A,#573170, #804565, #AA585B, #FD8046,rgb(235, 209, 103),   #D4F1F7, 
+    #BFE6F4, #ABDCF1,#96D1EE, #81C6EB );
+
+
+}
+
+
+#mountain{
+    background-image: url("./images/mainBackgroundElement.png");
+    height: auto;
+    width:100%;
+    background-position: bottom left 10%;
+    position: sticky;
+    top:100;
+    left:0;
+}
+
+
+#backgroundMain2{
+    background-image: url("./images/sunrise4.jpg");
+    height:60vh;
+    width: 100%;
+    background-position:  center;
+    background-size: 150vmax;
+    animation: glowUp 2000ms linear;
+    z-index: 1;
+    top:0;
+    position: absolute;
+}
+
+@keyframes glowUp {
+    from{filter: brightness(0) ; filter: grayscale(1);}
+    to{filter: brightness(1); filter: grayscale(0);}
+}
+
+.darkness{
+    width: 100%;
+    height: 60vh;
+    background-color: rgb(21, 18, 32);
+    position: absolute;
+    animation: slideU 12000ms, linear;
+    animation-fill-mode: forwards;
+    top:0;
+    filter: blur(200px);
+    z-index: 4;
+}
+
+.cloud{
+    position: relative;
+    z-index: 3;
+    background-size: contain ;
+    background-repeat: no-repeat;
+    animation: cloudSlide;
+    animation-iteration-count: infinite;
+    opacity: .8;
+
+
+}
+
+#cloud1{
+    background-image: url("./images/cloud1.png");
+    height: 5vh;
+    top:15vh;
+    left: 55vw;
+    filter: brightness(.9);
+    animation-duration: 60s;
+
+
+}
+
+#cloud2{
+    background-image: url("./images/cloud2.png");
+    height: 8vh;
+    top:10vh;
+    left: 80vw;;
+    filter: brightness(.8);
+    animation-duration: 55s;
+
+}
+
+#cloud3{
+    background-image: url("./images/cloud3.png");
+    height: 13vh;
+    left: 20vw;
+    filter: brightness(.7);
+    animation-duration: 50s;
+
+}
+
+@keyframes cloudSlide {
+    0%{transform: translate(0,0)}
+
+    25%{transform: translate(50px,20px)}
+
+    50%{transform: translate(40px, 20px);}
+
+    75%{transform: translate(0px,15px);}
+
+    100%{transform: translate(0,0)}
+
+    
+}
+
+@keyframes slideU{
+    from{transform: translateY(0vh); opacity: .4;}
+    to{transform:translateY(-100vh); opacity: 0;}
+}
+
+
+#logo{
+    position: absolute;
+    top: 0px;
+    padding-left: calc(50% - 70px);
+    z-index: 2;
+    font-family: "pinyonScript";
+    display:flex;
+    padding-top: 30px;
+    color: white;
+    text-shadow: black 10px 0px 10px;
+    width: 100%;
+  
+  }
+  
+  #r{
+    font-size: 5vh;}
+  #d{
+    font-size: 5vh;
+    margin-top: 15px;}

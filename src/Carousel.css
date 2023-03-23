@@ -1,0 +1,99 @@
+#carousel{
+    display: grid;
+    position: relative;
+    grid-template-columns: auto auto;
+    height: 60vh;
+    max-height: 80vw;
+    place-items: center;
+    gap: 1%;
+    overflow: hidden;
+    margin-top: 70px;
+    margin-bottom: 50px;
+    border-radius: 10px;
+    border: solid 1px rgb(212, 174, 174);
+}
+
+
+
+.column img{
+    position: relative;
+    width: 100%;
+    object-fit: cover;
+}
+
+
+#c1r1{
+    animation: moveUp 70s linear infinite;
+    flex-direction: column;
+
+
+}
+#c1r2{
+   
+    animation: moveUp 70s linear infinite;
+
+}
+
+#c2r1{
+   
+    animation: moveUp 50s linear infinite;
+    animation-direction: reverse;
+
+
+}
+#c2r2{
+   
+    animation: moveUp 50s linear infinite;
+    animation-direction: reverse;
+
+}
+
+@keyframes moveUp {
+    from{transform: translateY(0px);}
+    to{transform: translateY(-100% );}
+}
+
+@keyframes moveUp2 {
+    from{transform: translateY(100%);}
+}
+
+#menulink{
+    text-decoration: none;
+    font-size: clamp(15px, 2vw , 30px);
+    color: black;
+    background-color: rgb(234,211,208);
+    border-radius: 10px;
+    padding: 10px 15px 10px;
+    margin-top: 100px;
+}
+
+#menulink:hover{
+    background-color: rgb(186, 167, 164);
+}
+
+#bestSeller{
+    font-family: "faustina";
+    font-size: clamp(20px, 3vw , 35px);
+    
+
+}
+
+.caption{
+    position: relative;
+    width: 100%;
+    height: 0;
+    text-align: center;
+    bottom: 0;
+    z-index: 3;
+    transform: translateY(-45px);
+    text-shadow: white 0px 0px 10px;
+    color: black;
+    font-size: clamp(9px, 2vw, 20px);
+}
+
+mark{
+    background-color: rgb(249, 226, 223);
+    border-radius: 15% 35% 25% 24%;
+    padding: 10px 10px 10px 10px;
+
+}

@@ -1,0 +1,120 @@
+
+#cover{
+    right: 0;
+    background-image: linear-gradient(#7D9D87, #6F927A);
+    position: absolute;
+    height:100%;
+    animation: slideCover 2000ms ease forwards;
+    z-index: 4;
+
+}
+
+
+
+#menu {
+    background-color: #008475;
+    height:100vh;
+    display: flex;
+    align-items: center;
+    animation: slide 1500ms ease ;
+    transition: filter 300ms ease;
+}
+
+
+.menu-item{
+    color: white;
+    font-size: clamp(3rem, 8vw, 8rem);
+    font-family: "Ibarra Real Nova", serif;
+    
+    display: block;
+    text-decoration: none;
+    padding: clamp(0.25rem, 0.5vw,1rem) 0rem;
+    float: left;
+    clear:left;
+    transition: opacity 300ms ease;
+    
+}
+
+#menu-items{
+    margin-left: clamp(4rem, 20vw,48rem);
+    z-index: 5;
+    
+}
+
+#menu-items:hover > .menu-item{
+    opacity: 0.3;
+
+}
+
+#menu-items:hover > .menu-item:hover{
+    opacity:1 ;
+}
+
+#menu-background-parttern {
+    height: 100vh;
+    width: 100vw;
+    background-image: radial-gradient(
+        rgba(2255,255,255,0.3) 8%, 
+        transparent 9%
+    );
+    
+    background-size: 12vmin 12vmin;
+    position: absolute;
+    z-index: 1;
+    transition: opacity 600ms ease,  
+                background-size 600ms ease;
+
+}
+
+
+
+
+#photo {
+    
+    position: absolute;
+    width: 100%;
+    height:100%;
+    opacity: 0.5;
+    background-image: url('./images/photo1.jpg');
+    background-size: 110vmax;
+    background-position: center 40%;
+    filter: grayscale(.3);
+    
+}
+#menu-items:hover ~ #photo{
+    background-size: 100vmax;
+    opacity: 0.45;
+}
+#menu-items:hover ~ #menu-background-parttern{
+    background-size: 10vmin 10vmin;
+    opacity: 0.3;
+}
+
+
+
+
+@keyframes slide {
+    0% {
+      transform: translateX(-100vw);
+      opacity: 0;
+      filter:blur(0px);
+    }
+    100% {
+      transform: translateX(0px);
+      opacity: 1;
+      filter:blur(1.5px);
+    }
+  }
+  
+
+
+  @keyframes slideCover {
+    0% {
+      width: 100%;
+    }
+    
+    100% {
+      width: 0;      
+    }
+  }
+  
